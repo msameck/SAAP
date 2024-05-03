@@ -41,39 +41,39 @@
         </div>
       </div>
       <div class="text-center">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <a href="#about" class="btn-get-started scrollto">Vamos Começar!</a>
       </div>
 
       <div class="row icon-boxes">
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box">
-            <div class="icon"><i class="ri-stack-line"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            <div class="icon"><i class="bi bi-cash"></i></div>
+            <h4 class="title"><a href="">Abono de Faltas</a></h4>
+            <p class="description">É necessário fornecer informações sobre o período e motivo das faltas + Documentos comprobatórios.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
           <div class="icon-box">
-            <div class="icon"><i class="ri-palette-line"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            <div class="icon"><i class="bi bi-file-earmark-text"></i></div>
+            <h4 class="title"><a href="">Declarações</a></h4>
+            <p class="description">Utilizadas para atestar informações sobre o requerente, como matrícula, renda ou vínculo empregatício.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
           <div class="icon-box">
-            <div class="icon"><i class="ri-command-line"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            <div class="icon"><i class="bi bi-luggage"></i></div>
+            <h4 class="title"><a href="">Férias</a></h4>
+            <p class="description">Solicita períodos de descanso remunerado, conforme as políticas da empresa ou instituição. Solicite aqui!</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
           <div class="icon-box">
-            <div class="icon"><i class="ri-fingerprint-line"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            <div class="icon"><i class="bi bi-plus-circle"></i></div>
+            <h4 class="title"><a href="">Outros Serviços</a></h4>
+            <p class="description">Solicite serviços diversos, como alterações cadastrais, empréstimos, reservas de espaços, entre outros. É só pressionar aqui.</p>
           </div>
         </div>
 
