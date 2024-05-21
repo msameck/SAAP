@@ -1,11 +1,3 @@
-/**
-* Template Name: OnePage
-* Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -118,14 +110,14 @@ h6 {
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  background: #fff;
+  background: #0D0140;
   z-index: 997;
   padding: 15px 0;
-  border-bottom: 1px solid #e6f2fb;
+  border-bottom: 1px solid #0D0140;
 }
 
 #header.header-scrolled {
-  border-color: #fff;
+  border-color: #2f00ff;
   box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
 }
 
@@ -134,13 +126,13 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 300;
+  font-weight: 900;
   letter-spacing: 0.5px;
   font-family: "Poppins", sans-serif;
 }
 
 #header .logo a {
-  color: #16507b;
+  color: #ffffff;
 }
 
 #header .logo img {
@@ -182,7 +174,7 @@ h6 {
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-size: 14px;
-  color: #16507b;
+  color: #c7e7ff;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -396,14 +388,14 @@ h6 {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/saap-bg.png") top center;
   background-size: cover;
   position: relative;
 }
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(17, 4, 49, 0.774);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -420,12 +412,12 @@ h6 {
   font-size: 56px;
   font-weight: 700;
   line-height: 72px;
-  color: #124265;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
 #hero h2 {
-  color: #5e5e5e;
+  color: #d6d6d6;
   margin: 10px 0 0 0;
   font-size: 22px;
 }
@@ -456,10 +448,10 @@ h6 {
   padding: 50px 30px;
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: #0D0140;
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   transition: all 0.3s ease-in-out;
-  border-radius: 8px;
+  border-radius: 12px;
   z-index: 1;
 }
 
@@ -470,11 +462,12 @@ h6 {
 }
 
 #hero .icon-box .title a {
-  color: #124265;
+  color: #fff;
   transition: 0.3s;
 }
 
 #hero .icon-box .description {
+  color: #dddddd81;
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
@@ -487,15 +480,15 @@ h6 {
   transition: all 0.3s ease-in-out;
   font-size: 36px;
   line-height: 1;
-  color: #2487ce;
+  color: #00d0ff;
 }
 
 #hero .icon-box:hover {
-  transform: scale(1.08);
+  transform: scale(1.02);
 }
 
 #hero .icon-box:hover .title a {
-  color: #2487ce;
+  color: #26ff00;
 }
 
 @media (min-width: 1024px) {

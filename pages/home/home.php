@@ -16,6 +16,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <!-- Vendor CSS Files -->
   <link href="public/vendor/aos/aos.css" rel="stylesheet">
   <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +39,7 @@
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
       <div class="row justify-content-center">
         <div class="col-xl-7 col-lg-9 text-center">
-          <h1>Olá (Nome do Usuário)!!!</h1>
+          <h1>Olá, (Nome do Usuário)!!!</h1>
           <h2>Seja bem vindo(a) a sua plataforma de acompanhamento de processos e requerimetnos digitais</h2>
         </div>
       </div>
@@ -45,7 +48,7 @@
       </div>
 
       <div class="row icon-boxes">
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-cash"></i></div>
             <h4 class="title"><a href="">Abono de Faltas</a></h4>
@@ -53,7 +56,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-file-earmark-text"></i></div>
             <h4 class="title"><a href="">Declarações</a></h4>
@@ -61,7 +64,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-luggage"></i></div>
             <h4 class="title"><a href="">Férias</a></h4>
@@ -69,7 +72,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="400">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-plus-circle"></i></div>
             <h4 class="title"><a href="">Outros Serviços</a></h4>
