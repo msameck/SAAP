@@ -1,85 +1,89 @@
-/**
-* PHP Email Form Validation - v3.7
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
-*/
-(function () {
+(function() {
   "use strict";
 
-  let forms = document.querySelectorAll('.php-email-form');
-
-  forms.forEach( function(e) {
-    e.addEventListener('submit', function(event) {
+  document.querySelectorAll('.php-email-form').forEach(function(form) {
+    form.addEventListener('submit', function(event) {
       event.preventDefault();
 
       let thisForm = this;
+      let actionUrl = thisForm.getAttribute('action');
+      let recaptchaKey = thisForm.getAttribute('data-recaptcha-site-key');
 
-      let action = thisForm.getAttribute('action');
-      let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
-      
-      if( ! action ) {
-        displayError(thisForm, 'The form action property is not set!');
+      if (!actionUrl) {
+        showError(thisForm, 'The form action property is not set!');
         return;
       }
-      thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
-      thisForm.querySelector('.sent-message').classList.remove('d-block');
 
-      let formData = new FormData( thisForm );
+      toggleLoadingState(thisForm, true);
+      clearMessages(thisForm);
 
-      if ( recaptcha ) {
-        if(typeof grecaptcha !== "undefined" ) {
+      let formData = new FormData(thisForm);
+
+      if (recaptchaKey) {
+        if (typeof grecaptcha !== "undefined") {
           grecaptcha.ready(function() {
             try {
-              grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
-              .then(token => {
+              grecaptcha.execute(recaptchaKey, {action: 'php_email_form_submit'}).then(token => {
                 formData.set('recaptcha-response', token);
-                php_email_form_submit(thisForm, action, formData);
-              })
-            } catch(error) {
-              displayError(thisForm, error);
+                submitForm(thisForm, actionUrl, formData);
+              });
+            } catch (error) {
+              showError(thisForm, error);
             }
           });
         } else {
-          displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
+          showError(thisForm, 'The reCaptcha javascript API url is not loaded!');
         }
       } else {
-        php_email_form_submit(thisForm, action, formData);
+        submitForm(thisForm, actionUrl, formData);
       }
     });
   });
 
-  function php_email_form_submit(thisForm, action, formData) {
-    fetch(action, {
+  function submitForm(form, actionUrl, formData) {
+    fetch(actionUrl, {
       method: 'POST',
       body: formData,
       headers: {'X-Requested-With': 'XMLHttpRequest'}
     })
     .then(response => {
-      if( response.ok ) {
+      if (response.ok) {
         return response.text();
       } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+        throw new Error(`${response.status} ${response.statusText} ${response.url}`);
       }
     })
     .then(data => {
-      thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
-        thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
+      toggleLoadingState(form, false);
+      if (data.trim() === 'OK') {
+        showSuccessMessage(form);
+        form.reset();
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(data ? data : `Form submission failed and no error message returned from: ${actionUrl}`);
       }
     })
-    .catch((error) => {
-      displayError(thisForm, error);
+    .catch(error => {
+      showError(form, error);
     });
   }
 
-  function displayError(thisForm, error) {
-    thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
-    thisForm.querySelector('.error-message').classList.add('d-block');
+  function toggleLoadingState(form, isLoading) {
+    form.querySelector('.loading').classList.toggle('d-block', isLoading);
+  }
+
+  function clearMessages(form) {
+    form.querySelector('.error-message').classList.remove('d-block');
+    form.querySelector('.sent-message').classList.remove('d-block');
+  }
+
+  function showSuccessMessage(form) {
+    form.querySelector('.sent-message').classList.add('d-block');
+  }
+
+  function showError(form, error) {
+    form.querySelector('.loading').classList.remove('d-block');
+    form.querySelector('.error-message').textContent = error;
+    form.querySelector('.error-message').classList.add('d-block');
   }
 
 })();
