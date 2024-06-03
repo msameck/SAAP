@@ -1,5 +1,5 @@
 <?php
   define("SERVER","localhost");
-  define("USER","root");
-  define("PASSWORD","");
-  define("DB","acompanhamento_processos");
+  define("USER","u330563822_saap");
+  define("PASSWORD","@Ajgeral2022pe@");
+  define("DB","u330563822_saap");
