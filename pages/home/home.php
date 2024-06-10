@@ -39,8 +39,8 @@
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
       <div class="row justify-content-center">
         <div class="col-xl-7 col-lg-9 text-center">
-          <h1>Olá, (Nome do Usuário)!!!</h1>
-          <h2>Seja bem vindo(a) a sua plataforma de acompanhamento de processos e requerimetnos digitais</h2>
+          <h1>Olá, <?php echo htmlspecialchars($_SESSION['username']); ?>!!!!</h1>
+          <h2>Seja bem vindo(a) a sua plataforma de acompanhamento de processos e requerimentos digitais</h2>
         </div>
       </div>
       <div class="text-center">

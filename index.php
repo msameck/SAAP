@@ -1,5 +1,13 @@
 <?php
-  include("database/conexao.php");
+  $caminho_de_conexão = "database/conexao.php";
+  require_once $caminho_de_conexão;
+
+  session_start();
+
+  if (isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: login.php');
+    exit();
+  }
 ?>
 
 <!DOCTYPE html>
